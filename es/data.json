@@ -1,0 +1,240 @@
+{
+  "childNode": {
+    "name": "notifierfa5f_fd8d",
+    "type": "notifier",
+    "prevId": "sid-startevent",
+    "nodeId": "fa5f_fd8d",
+    "properties": {
+      "actionerRules": [
+        {
+          "type": "target_approval",
+          "approvals": [{ "userName": "夏静思", "workNo": "014306075323135539" }]
+        },
+        {
+          "select": ["allStaff"],
+          "range": { "allStaff": null },
+          "multi": 1,
+          "type": "target_select",
+          "key": "manual_fa5f_fd8d_ba47_00c5"
+        }
+      ]
+    },
+    "childNode": {
+      "childNode": {
+        "name": "notifierf435_d3d6",
+        "type": "notifier",
+        "prevId": "d5Fb_7B6L",
+        "nodeId": "f435_d3d6",
+        "properties": {
+          "actionerRules": [
+            {
+              "type": "target_approval",
+              "approvals": [{ "userName": "程慧芳", "workNo": "091725385430830967" }]
+            },
+            {
+              "select": ["allStaff"],
+              "range": { "allStaff": null },
+              "multi": 1,
+              "type": "target_select",
+              "key": "manual_f435_d3d6_bf1c_c798"
+            }
+          ]
+        },
+        "childNode": {
+          "type": "route",
+          "prevId": "f435_d3d6",
+          "nodeId": "37f3_787d",
+          "conditionNodes": [
+            {
+              "name": "条件1",
+              "type": "condition",
+              "prevId": "37f3_787d",
+              "nodeId": "c44d_2a42",
+              "properties": {
+                "conditions": [
+                  [
+                    {
+                      "type": "dingtalk_actioner_value_condition",
+                      "paramKey": "DDHolidayField-J2BWEN12__options",
+                      "paramLabel": "请假类型",
+                      "paramValue": "",
+                      "paramValues": ["年假"],
+                      "oriValue": [
+                        "年假",
+                        "事假",
+                        "病假",
+                        "调休",
+                        "产假",
+                        "陪产假",
+                        "婚假",
+                        "例假",
+                        "丧假"
+                      ],
+                      "isEmpty": false
+                    }
+                  ]
+                ]
+              },
+              "childNode": {
+                "type": "route",
+                "prevId": "c44d_2a42",
+                "nodeId": "9667_9001",
+                "conditionNodes": [
+                  {
+                    "name": "条件1",
+                    "type": "condition",
+                    "prevId": "9667_9001",
+                    "nodeId": "393a_2d50",
+                    "properties": {
+                      "conditions": [
+                        [
+                          {
+                            "type": "dingtalk_actioner_value_condition",
+                            "paramKey": "DDHolidayField-J2BWEN12__options",
+                            "paramLabel": "请假类型",
+                            "paramValue": "",
+                            "paramValues": ["年假", "调休", "产假", "丧假", "婚假", "病假", "事假"],
+                            "oriValue": [
+                              "年假",
+                              "事假",
+                              "病假",
+                              "调休",
+                              "产假",
+                              "婚假",
+                              "例假",
+                              "丧假"
+                            ],
+                            "isEmpty": false
+                          },
+                          {
+                            "type": "dingtalk_actioner_range_condition",
+                            "paramKey": "DDHolidayField-J2BWEN12__duration",
+                            "paramLabel": "时长（天）",
+                            "lowerBound": 123,
+                            "upperBound": "",
+                            "unit": "天",
+                            "isEmpty": false
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "name": "条件2",
+                    "type": "condition",
+                    "prevId": "9667_9001",
+                    "nodeId": "e7a0_c404",
+                    "properties": { "conditions": [[]] }
+                  }
+                ],
+                "properties": {},
+                "childNode": {
+                  "name": "approvera337_36f8",
+                  "type": "approver",
+                  "prevId": "9667_9001",
+                  "nodeId": "a337_36f8",
+                  "properties": {
+                    "activateType": "ONE_BY_ONE",
+                    "agreeAll": false,
+                    "actionerRules": [
+                      { "type": "target_management", "level": 1, "isEmpty": false, "autoUp": true }
+                    ],
+                    "noneActionerAction": "admin"
+                  },
+                  "childNode": {
+                    "name": "notifier1210_c19a",
+                    "type": "notifier",
+                    "prevId": "a337_36f8",
+                    "nodeId": "1210_c19a",
+                    "properties": {
+                      "actionerRules": [
+                        {
+                          "type": "target_approval",
+                          "approvals": [
+                            { "userName": "艾唏(已离职)", "workNo": "14213861181057361" }
+                          ]
+                        },
+                        {
+                          "select": ["allStaff"],
+                          "range": { "allStaff": null },
+                          "multi": 1,
+                          "type": "target_select",
+                          "key": "manual_1210_c19a_572d_94ea"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "条件2",
+              "type": "condition",
+              "prevId": "37f3_787d",
+              "nodeId": "764f_8975",
+              "properties": { "conditions": [] },
+              "childNode": {
+                "name": "notifiereccc_9d4f",
+                "type": "notifier",
+                "prevId": "764f_8975",
+                "nodeId": "eccc_9d4f",
+                "properties": {
+                  "actionerRules": [
+                    {
+                      "type": "target_approval",
+                      "approvals": [{ "userName": "程慧芳", "workNo": "091725385430830967" }]
+                    },
+                    {
+                      "select": ["allStaff"],
+                      "range": { "allStaff": null },
+                      "multi": 1,
+                      "type": "target_select",
+                      "key": "manual_eccc_9d4f_0f1e_c8c6"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "properties": {},
+          "childNode": {
+            "name": "approverb1d4_6dbd",
+            "type": "approver",
+            "prevId": "37f3_787d",
+            "nodeId": "b1d4_6dbd",
+            "properties": {
+              "activateType": "ONE_BY_ONE",
+              "agreeAll": false,
+              "actionerRules": [
+                { "type": "target_management", "level": 1, "isEmpty": false, "autoUp": true }
+              ],
+              "noneActionerAction": "admin"
+            }
+          }
+        }
+      },
+      "name": "approverd5Fb_7B6L",
+      "nodeId": "d5Fb_7B6L",
+      "prevId": "fa5f_fd8d",
+      "properties": {
+        "actionerRules": [
+          {
+            "type": "target_select",
+            "multi": 1,
+            "select": ["approvals"],
+            "range": { "approvals": [{ "userName": "艾唏", "workNo": "14213861181057361" }] },
+            "isEmpty": false,
+            "key": "manual_d5Fb_7B6L_15d4_33ea",
+            "actType": "and"
+          }
+        ],
+        "activateType": "ALL",
+        "agreeAll": true
+      },
+      "type": "approver"
+    }
+  },
+  "name": "发起人",
+  "nodeId": "sid-startevent",
+  "type": "start"
+}

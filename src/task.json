@@ -1,0 +1,17 @@
+[
+  {
+    "name": "半数以上同意通过",
+    "value": "${nrOfPassCount > (nrOfInstances / 2)}",
+    "oppositeValue": "${nrOfPassCount <= (nrOfInstances / 2)}"
+  },
+  {
+    "name": "全数同意通过",
+    "value": "${nrOfPassCount == nrOfInstances}",
+    "oppositeValue": "${nrOfPassCount != nrOfInstances}"
+  },
+  {
+    "name": "一人同意即通过",
+    "value": "${nrOfPassCount >= 1}",
+    "oppositeValue": "${nrOfPassCount < 1}"
+  }
+]

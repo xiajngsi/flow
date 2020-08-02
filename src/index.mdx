@@ -1,0 +1,22 @@
+---
+name: Home
+route: /
+fullpage: true
+---
+import { Playground, Props } from 'docz'
+import Flow from './';
+import value from './data-other';
+import config from './config';
+import taskTypes from './task.json';
+import candidateStructure from './candidateStructure.json';
+
+## Flow
+
+### 代码演示
+
+<Playground >
+  <Flow value={value.flowData} layoutType='vertical' height='1000px' config={config} taskTypes={taskTypes} getCandidates={() => new Promise(resolve => resolve([]))} candidateStructure={candidateStructure}/>
+</Playground>
+
+### API
+<Props of={Flow} />

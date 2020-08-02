@@ -1,0 +1,54 @@
+[
+  {
+    "flowCandidateType": { "id": "4", "value": "员工", "name": null, "userCandidateType": false },
+    "candidateValueDefinitions": [
+      { "candidateValueEnum": "VALUE", "valueSequence": ["4"] },
+      { "candidateValueEnum": "PARAM", "valueSequence": null }
+    ],
+    "candidateFunction": null,
+    "dataType": "1"
+  },
+  {
+    "flowCandidateType": { "id": "2", "value": "部门", "name": null, "userCandidateType": false },
+    "candidateValueDefinitions": [
+      { "candidateValueEnum": "VALUE", "valueSequence": ["2", "3"] },
+      { "candidateValueEnum": "PARAM", "valueSequence": null }
+    ],
+    "candidateFunction": null,
+    "dataType": "2"
+  },
+  {
+    "flowCandidateType": {
+      "id": "7",
+      "value": "采购组+角色",
+      "name": null,
+      "userCandidateType": false
+    },
+    "candidateValueDefinitions": [{ "candidateValueEnum": "FUNCTION", "valueSequence": null }],
+    "candidateFunction": {
+      "type": 1,
+      "callPath": "io.terminus.xx.xx.methodName",
+      "paramList": [
+        {
+          "paramClass": "java.lang.String",
+          "type": 2,
+          "paramName": "采购组",
+          "valueSequence": null,
+          "candidateValues": null,
+          "candidateParam": null,
+          "dataType": "3"
+        },
+        {
+          "paramClass": "java.util.List",
+          "type": 1,
+          "paramName": "角色",
+          "valueSequence": ["5"],
+          "candidateValues": null,
+          "candidateParam": null,
+          "dataType": "1"
+        }
+      ]
+    },
+    "dataType": "1"
+  }
+]

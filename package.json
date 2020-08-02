@@ -1,0 +1,39 @@
+{
+  "name": "process",
+  "version": "0.1.3",
+  "description": "",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es"
+  ],
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "/flow",
+  "scripts": {
+    "pub:major": "npm version major && npm publish",
+    "pub:minor": "npm version minor && npm publish",
+    "pub:patch": "npm version patch && npm publish",
+    "dev": "father doc dev",
+    "build": "father build"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "father": "^2.16.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@terminus/nusi": "^2.1.68",
+    "@types/lodash": "^4.14.141",
+    "antd": "^3.23.6",
+    "babel-plugin-import": "^1.12.2",
+    "immer": "^4.0.1",
+    "query-string": "^6.8.3",
+    "snapsvg-cjs": "0.0.6",
+    "typescript": "^3.6.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model1": {
+    "fields": {
+      "department": {
+        "name": "申请人部门",
+        "type": "Enum",
+        "typeMeta": {
+          "options": [
+            {
+              "label": "枚举展示标签",
+              "value": "枚举值"
+            }
+          ]
+        }
+      }
+    },
+    "name": "订单"
+  }
+}

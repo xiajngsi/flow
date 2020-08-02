@@ -1,0 +1,1148 @@
+{
+  "startEvent": {
+    "id": "start",
+    "name": "start",
+    "__filemeta": {
+      "name": "startEvent",
+      "filename": "src/constants/index.tsx"
+    }
+  },
+  "endEvent": {
+    "id": "end",
+    "name": "end",
+    "nodeId": "end",
+    "__filemeta": {
+      "name": "endEvent",
+      "filename": "src/constants/index.tsx"
+    }
+  },
+  "sequenceList": [
+    {
+      "sourceRef": "start",
+      "targetRef": "approver_jnzt_mm6f",
+      "hasCondition": false,
+      "id": "_lapb_g7kb"
+    },
+    {
+      "sourceRef": "approver_jnzt_mm6f",
+      "targetRef": "approver_jrmz_smzi",
+      "hasCondition": true,
+      "id": "_lapb_7k7a",
+      "priority": 1,
+      "conditionExpression": ""
+    },
+    {
+      "sourceRef": "approver_jrmz_smzi",
+      "targetRef": "end",
+      "hasCondition": false,
+      "id": "_lapb_sqo4"
+    },
+    {
+      "sourceRef": "approver_jnzt_mm6f",
+      "targetRef": "approver_kc0e_ibcb",
+      "hasCondition": true,
+      "id": "_lapc_3n6p",
+      "priority": 1,
+      "conditionExpression": ""
+    },
+    {
+      "sourceRef": "approver_kc0e_ibcb",
+      "targetRef": "end",
+      "hasCondition": false,
+      "id": "_lapc_2ech"
+    },
+    {
+      "sourceRef": "approver_jnzt_mm6f",
+      "targetRef": "approver_kf17_k26l",
+      "hasCondition": true,
+      "id": "_lapc_jrfa",
+      "priority": 1,
+      "conditionExpression": ""
+    },
+    {
+      "sourceRef": "approver_kf17_k26l",
+      "targetRef": "end",
+      "hasCondition": false,
+      "id": "_lapc_d82a"
+    }
+  ],
+  "taskList": [
+    {
+      "id": "approver_jnzt_mm6f",
+      "name": "审批人",
+      "type": "approver",
+      "nodeId": "approver_jnzt_mm6f",
+      "prevId": "start",
+      "multiTaskType": "",
+      "taskCandidate": {},
+      "__filemeta": {
+        "name": "initCandidate",
+        "filename": "src/constants/index.tsx"
+      }
+    },
+    {
+      "id": "approver_jrmz_smzi",
+      "name": "审批人",
+      "type": "approver",
+      "nodeId": "approver_jrmz_smzi",
+      "prevId": "condition_jp2r_y2qu",
+      "multiTaskType": "",
+      "taskCandidate": {},
+      "__filemeta": {
+        "name": "initCandidate",
+        "filename": "src/constants/index.tsx"
+      }
+    },
+    {
+      "id": "approver_kc0e_ibcb",
+      "name": "审批人",
+      "type": "approver",
+      "nodeId": "approver_kc0e_ibcb",
+      "prevId": "condition_kai2_b0d4",
+      "multiTaskType": "",
+      "taskCandidate": {},
+      "__filemeta": {
+        "name": "initCandidate",
+        "filename": "src/constants/index.tsx"
+      }
+    },
+    {
+      "id": "approver_kf17_k26l",
+      "name": "审批人",
+      "type": "approver",
+      "nodeId": "approver_kf17_k26l",
+      "prevId": "condition_kdjc_cq6t",
+      "multiTaskType": "",
+      "taskCandidate": {},
+      "__filemeta": {
+        "name": "initCandidate",
+        "filename": "src/constants/index.tsx"
+      }
+    }
+  ],
+  "flowData": {
+    "value": {
+      "nodeId": "start",
+      "type": "start",
+      "name": "start",
+      "nextId": "end",
+      "childNode": {
+        "type": "approver",
+        "name": "审批人",
+        "nodeId": "approver_jnzt_mm6f",
+        "prevId": "start",
+        "childNode": {
+          "type": "route",
+          "nodeId": "route_jp2r_hc4p",
+          "prevId": "approver_jnzt_mm6f",
+          "conditionNodes": [
+            {
+              "type": "condition",
+              "nodeId": "condition_jp2r_y2qu",
+              "name": "条件1",
+              "prevId": "route_jp2r_hc4p",
+              "childNode": {
+                "type": "approver",
+                "name": "审批人",
+                "nodeId": "approver_jrmz_smzi",
+                "prevId": "condition_jp2r_y2qu"
+              }
+            },
+            {
+              "type": "condition",
+              "nodeId": "condition_jp2r_3ssv",
+              "name": "条件2",
+              "prevId": "route_jp2r_hc4p",
+              "childNode": {
+                "type": "route",
+                "nodeId": "route_kai2_2s4y",
+                "prevId": "condition_jp2r_3ssv",
+                "conditionNodes": [
+                  {
+                    "type": "condition",
+                    "nodeId": "condition_kai2_b0d4",
+                    "name": "条件1",
+                    "prevId": "route_kai2_2s4y",
+                    "childNode": {
+                      "type": "approver",
+                      "name": "审批人",
+                      "nodeId": "approver_kc0e_ibcb",
+                      "prevId": "condition_kai2_b0d4"
+                    }
+                  },
+                  {
+                    "type": "condition",
+                    "nodeId": "condition_kai2_xql4",
+                    "name": "条件2",
+                    "prevId": "route_kai2_2s4y",
+                    "childNode": {
+                      "type": "route",
+                      "nodeId": "route_kdjc_fc8r",
+                      "prevId": "condition_kai2_xql4",
+                      "conditionNodes": [
+                        {
+                          "type": "condition",
+                          "nodeId": "condition_kdjc_cq6t",
+                          "name": "条件1",
+                          "prevId": "route_kdjc_fc8r",
+                          "childNode": {
+                            "type": "approver",
+                            "name": "审批人",
+                            "nodeId": "approver_kf17_k26l",
+                            "prevId": "condition_kdjc_cq6t"
+                          }
+                        },
+                        {
+                          "type": "condition",
+                          "nodeId": "condition_kdjc_fdak",
+                          "name": "条件2",
+                          "prevId": "route_kdjc_fc8r"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "configValue": {
+      "start": {
+        "nodeId": "start",
+        "type": "start",
+        "name": "start",
+        "nextId": "end"
+      },
+      "condition_huwb_gan2": {
+        "type": "condition",
+        "nodeId": "condition_huwb_gan2",
+        "name": "条件1",
+        "prevId": "route_huwb_w5f0",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_huwb_pe76": {
+        "type": "condition",
+        "nodeId": "condition_huwb_pe76",
+        "name": "条件2",
+        "prevId": "route_huwb_w5f0",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_ifi6_bop3": {
+        "type": "condition",
+        "nodeId": "condition_ifi6_bop3",
+        "name": "条件1",
+        "prevId": "approver_ifi6_icm2",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_ifi6_ri6o": {
+        "type": "condition",
+        "nodeId": "condition_ifi6_ri6o",
+        "name": "条件2",
+        "prevId": "approver_ifi6_icm2",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_igq1_lyq5": {
+        "type": "condition",
+        "nodeId": "condition_igq1_lyq5",
+        "name": "条件1",
+        "prevId": "notifier_igq1_esfv",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_igq1_n2cq": {
+        "type": "condition",
+        "nodeId": "condition_igq1_n2cq",
+        "name": "条件2",
+        "prevId": "notifier_igq1_esfv",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_iip3_3zlq": {
+        "type": "condition",
+        "nodeId": "condition_iip3_3zlq",
+        "name": "条件1",
+        "prevId": "route_iip3_5qt2",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_iip3_4rv7": {
+        "type": "condition",
+        "nodeId": "condition_iip3_4rv7",
+        "name": "条件2",
+        "prevId": "route_iip3_5qt2",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_janq_ep82": {
+        "type": "condition",
+        "nodeId": "condition_janq_ep82",
+        "name": "条件1",
+        "prevId": "route_janq_1a33",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_janq_3mdr": {
+        "type": "condition",
+        "nodeId": "condition_janq_3mdr",
+        "name": "条件2",
+        "prevId": "route_janq_1a33",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jcli_qth8": {
+        "type": "condition",
+        "nodeId": "condition_jcli_qth8",
+        "name": "条件1",
+        "prevId": "approver_jcli_mzl8",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jcli_29e6": {
+        "type": "condition",
+        "nodeId": "condition_jcli_29e6",
+        "name": "条件2",
+        "prevId": "approver_jcli_mzl8",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jdgs_76po": {
+        "type": "condition",
+        "nodeId": "condition_jdgs_76po",
+        "name": "条件1",
+        "prevId": "notifier_jdgs_ffs7",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jdgs_tfi8": {
+        "type": "condition",
+        "nodeId": "condition_jdgs_tfi8",
+        "name": "条件2",
+        "prevId": "notifier_jdgs_ffs7",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "notifier_jf8q_o2s6": {
+        "type": "notifier",
+        "name": "抄送人",
+        "nodeId": "notifier_jf8q_o2s6",
+        "prevId": "condition_janq_3mdr",
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_jf8q_wln8": {
+        "type": "condition",
+        "nodeId": "condition_jf8q_wln8",
+        "name": "条件1",
+        "prevId": "notifier_jf8q_o2s6",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jf8q_skih": {
+        "type": "condition",
+        "nodeId": "condition_jf8q_skih",
+        "name": "条件2",
+        "prevId": "notifier_jf8q_o2s6",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jj1u_kzoz": {
+        "type": "condition",
+        "nodeId": "condition_jj1u_kzoz",
+        "name": "条件1",
+        "prevId": "approver_jj1u_fo29",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jj1u_onol": {
+        "type": "condition",
+        "nodeId": "condition_jj1u_onol",
+        "name": "条件2",
+        "prevId": "approver_jj1u_fo29",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "approver_jnzt_mm6f": {
+        "type": "approver",
+        "name": "审批人",
+        "nodeId": "approver_jnzt_mm6f",
+        "prevId": "start",
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_jnzt_s292": {
+        "type": "condition",
+        "nodeId": "condition_jnzt_s292",
+        "name": "条件1",
+        "prevId": "approver_jnzt_mm6f",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jnzt_wrel": {
+        "type": "condition",
+        "nodeId": "condition_jnzt_wrel",
+        "name": "条件2",
+        "prevId": "approver_jnzt_mm6f",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "route_jp2r_hc4p": {
+        "type": "route",
+        "nodeId": "route_jp2r_hc4p",
+        "prevId": "approver_jnzt_mm6f",
+        "conditionNodes": [
+          {
+            "type": "condition",
+            "nodeId": "condition_jp2r_y2qu",
+            "name": "条件1",
+            "prevId": "route_jp2r_hc4p"
+          },
+          {
+            "type": "condition",
+            "nodeId": "condition_jp2r_3ssv",
+            "name": "条件2",
+            "prevId": "route_jp2r_hc4p"
+          }
+        ],
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_jp2r_y2qu": {
+        "type": "condition",
+        "nodeId": "condition_jp2r_y2qu",
+        "name": "条件1",
+        "prevId": "route_jp2r_hc4p",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jp2r_3ssv": {
+        "type": "condition",
+        "nodeId": "condition_jp2r_3ssv",
+        "name": "条件2",
+        "prevId": "route_jp2r_hc4p",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "approver_jrmz_smzi": {
+        "type": "approver",
+        "name": "审批人",
+        "nodeId": "approver_jrmz_smzi",
+        "prevId": "condition_jp2r_y2qu",
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_jrmz_w686": {
+        "type": "condition",
+        "nodeId": "condition_jrmz_w686",
+        "name": "条件1",
+        "prevId": "approver_jrmz_smzi",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_jrmz_6tz6": {
+        "type": "condition",
+        "nodeId": "condition_jrmz_6tz6",
+        "name": "条件2",
+        "prevId": "approver_jrmz_smzi",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "route_kai2_2s4y": {
+        "type": "route",
+        "nodeId": "route_kai2_2s4y",
+        "prevId": "condition_jp2r_3ssv",
+        "conditionNodes": [
+          {
+            "type": "condition",
+            "nodeId": "condition_kai2_b0d4",
+            "name": "条件1",
+            "prevId": "route_kai2_2s4y"
+          },
+          {
+            "type": "condition",
+            "nodeId": "condition_kai2_xql4",
+            "name": "条件2",
+            "prevId": "route_kai2_2s4y"
+          }
+        ],
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_kai2_b0d4": {
+        "type": "condition",
+        "nodeId": "condition_kai2_b0d4",
+        "name": "条件1",
+        "prevId": "route_kai2_2s4y",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_kai2_xql4": {
+        "type": "condition",
+        "nodeId": "condition_kai2_xql4",
+        "name": "条件2",
+        "prevId": "route_kai2_2s4y",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "approver_kc0e_ibcb": {
+        "type": "approver",
+        "name": "审批人",
+        "nodeId": "approver_kc0e_ibcb",
+        "prevId": "condition_kai2_b0d4",
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_kc0e_9edb": {
+        "type": "condition",
+        "nodeId": "condition_kc0e_9edb",
+        "name": "条件1",
+        "prevId": "approver_kc0e_ibcb",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_kc0e_5w30": {
+        "type": "condition",
+        "nodeId": "condition_kc0e_5w30",
+        "name": "条件2",
+        "prevId": "approver_kc0e_ibcb",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "route_kdjc_fc8r": {
+        "type": "route",
+        "nodeId": "route_kdjc_fc8r",
+        "prevId": "condition_kai2_xql4",
+        "conditionNodes": [
+          {
+            "type": "condition",
+            "nodeId": "condition_kdjc_cq6t",
+            "name": "条件1",
+            "prevId": "route_kdjc_fc8r"
+          },
+          {
+            "type": "condition",
+            "nodeId": "condition_kdjc_fdak",
+            "name": "条件2",
+            "prevId": "route_kdjc_fc8r"
+          }
+        ],
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_kdjc_cq6t": {
+        "type": "condition",
+        "nodeId": "condition_kdjc_cq6t",
+        "name": "条件1",
+        "prevId": "route_kdjc_fc8r",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_kdjc_fdak": {
+        "type": "condition",
+        "nodeId": "condition_kdjc_fdak",
+        "name": "条件2",
+        "prevId": "route_kdjc_fc8r",
+        "priority": "1",
+        "conditionExpression": {
+          "relation": "||",
+          "conditions": [
+            {
+              "key": "department",
+              "rule": "=",
+              "value": ["枚举值"]
+            }
+          ]
+        },
+        "affiliation": "model1"
+      },
+      "approver_kf17_k26l": {
+        "type": "approver",
+        "name": "审批人",
+        "nodeId": "approver_kf17_k26l",
+        "prevId": "condition_kdjc_cq6t",
+        "multiTaskType": "",
+        "taskCandidate": {},
+        "__filemeta": {
+          "name": "initCandidate",
+          "filename": "src/constants/index.tsx"
+        }
+      },
+      "condition_kf17_yj8g": {
+        "type": "condition",
+        "nodeId": "condition_kf17_yj8g",
+        "name": "条件1",
+        "prevId": "approver_kf17_k26l",
+        "priority": 1,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      },
+      "condition_kf17_0pgo": {
+        "type": "condition",
+        "nodeId": "condition_kf17_0pgo",
+        "name": "条件2",
+        "prevId": "approver_kf17_k26l",
+        "priority": 2,
+        "conditionExpression": {
+          "relation": "$",
+          "conditions": [
+            {
+              "rule": "",
+              "key": "",
+              "value": "",
+              "__filemeta": {
+                "name": "initCondition",
+                "filename": "src/constants/index.tsx"
+              }
+            }
+          ],
+          "__filemeta": {
+            "name": "initConditionExpression",
+            "filename": "src/constants/index.tsx"
+          }
+        }
+      }
+    }
+  }
+}
