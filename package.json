@@ -27,7 +27,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@terminus/nusi": "^2.1.68",
     "@types/lodash": "^4.14.141",
     "antd": "^3.23.6",
     "babel-plugin-import": "^1.12.2",
